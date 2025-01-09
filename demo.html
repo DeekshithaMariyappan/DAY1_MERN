@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        body{
+            margin: 100px;    
+        }
+        div{
+            padding:5px;
+            border: 5px solid rgb(0, 0, 0);
+            background-color: rebeccapurple;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function redirect(){
+            const name=document.getElementById("name").value;
+            const password=document.getElementById("password").value;
+            if (!name || !password) {
+                alert("Please fill in all the fields.");
+                return;
+            }
+            document.write("Name: "+name);
+            document.write("<br>");
+            document.write("Password: "+password);        
+        }
+    </script>
+    <form>
+        <div>
+        <label for="name"><b>Name</b></label><br>
+        <input type="name" id="name" name="name" required placeholder="Enter Name"><br>
+        <label for="password"><b>Password</b></label><br>
+        <input type="password" id="password" name="password" required placeholder="Enter Password"><br>
+        <br><button onclick="redirect()"><b>Submit</b></button>
+    </div>
+    </form>
+    
+</body>
+</html>
